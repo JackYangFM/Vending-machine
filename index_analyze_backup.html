@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"><link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{margin:0;apdding:0;list-style:none;}
+.clear{clear:both;}
+table{border-collapse:collapse;border-color:#85579e;}
+body{background-image:linear-gradient(#202426 10%,#9100DE 80%);font-family:"Microsoft Yahei";color:#fff;}
+/*data_top*/
+.data_top{position:relative;}
+.data_top h1{text-align:center;font-size:0.75rem;font-weight:normal;line-height:1.5rem;}
+.data_top .d_timebox{position:absolute;top:0.6rem;left:1.2rem;}
+.data_top .d_timebox img{float:left;}
+.data_top .d_timebox #localtime{font-size:0.16rem;line-height:0.45rem;padding:0 0.2rem;}
+
+/*analyze table*/
+.analyze_content .a_table{height:8.3rem;margin:0.3rem 0.8rem;overflow:hidden;}
+.analyze_content .a_table table{border:0.01rem solid #85579e;}
+.analyze_content .a_table table thead tr th{line-height:0.8rem;font-size:0.18rem;background:rgba(46, 32, 61, 0.81);}
+.analyze_content .a_table table tbody tr{line-height:0.6rem;font-size:0.18rem;text-align:center;}
+.analyze_content .a_table table tbody .t_tr1{background:rgba(0, 0, 0, 0.25);}
+.analyze_content .a_table table tbody .t_tr2{background:rgba(0, 0, 0, 0.15);}
+
+.analyze_content .footer{font-size:0.14rem;color:#00bfff;margin:0.2rem 0 0 0.2rem;}
+
+</style>
+
+
+</head>
+
+<body>
+	<!--top start-->
+	<div class="data_top">
+    	<h1>用户流失预警</h1>
+        <div class="d_timebox">
+            <img src="images/clock.png" alt="time" width="45" height="45" />
+            <span id="localtime">2017-06-20 10:42:31</span>
+        </div>
+    </div>
+    <!--end top-->
+    
+    <!--analyze_content-->
+    <div class="analyze_content">
+        <!--a_table start-->
+        <div class="a_table">
+            <table border="1" width="100%">
+                <thead>
+                    <tr class="t_tr0">
+                        <th>用户名</th>
+                        <th>登录次数</th>
+                        <th>购买次数</th>
+                        <th>最后登录时间</th>
+                        <th>最后购买时间</th>
+                        <th>分析结果</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="t_tr1">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：忠告</td>
+                    </tr>
+                    <tr class="t_tr2">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：低</td>
+                    </tr>
+                    <tr class="t_tr1">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：忠告</td>
+                    </tr>
+                    <tr class="t_tr2">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：低</td>
+                    </tr>
+                    <tr class="t_tr1">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：忠告</td>
+                    </tr>
+                    <tr class="t_tr2">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：低</td>
+                    </tr>
+                    <tr class="t_tr1">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：忠告</td>
+                    </tr>
+                    <tr class="t_tr2">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：低</td>
+                    </tr>
+                    <tr class="t_tr1">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：忠告</td>
+                    </tr>
+                    <tr class="t_tr2">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：低</td>
+                    </tr>
+                    <tr class="t_tr1">
+                        <td>没心哪来的肺</td>
+                        <td>69</td>
+                        <td>53</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>2017.06.21-10:24:35</td>
+                        <td>风险系数：忠告</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--end a_table -->
+        
+        <div class="footer">
+            <span>直播动态  DataView 提供运营动态直播、数据综合展示、设备监控预警等多种场景模板，稍加修改就能够直接服务于您的可视化需求。</span>
+        </div>
+    </div>
+    <!--end analyze_content-->
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/highcharts-3d.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/highcharts-zh_CN.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/adaptive-version2.js"></script>
+    <script src="js/main.js"></script>	
+    
+    <script type="text/javascript">
+	//analyze
+	//scroll dynamic effect
+	(function ($) {
+		var status = false;
+		$.fn.scrollQ = function(options) {
+			var defaults = {
+				line:8,
+				scrollNum: 1,
+				scrollTime: 2000
+			};
+			var options = jQuery.extend(defaults, options);
+			var _self = this;
+			return this.each(function() {
+				$("li", this).each(function() {
+					$(this).css("display", "none");
+				});
+				$("li:lt(" + options.line + ")", this).each(function() {
+					$(this).css("display", "block");
+				});
+	
+				function scroll() {
+					for (i = 0; i < options.scrollNum; i++) {
+						var start = $("li:first", _self);
+						start.fadeOut(100);
+						start.css("display", "none");
+						start.appendTo(_self);
+						$("li:eq(" + (options.line - 1) + ")", _self).each(function() {
+							$(this).fadeIn(500);
+							$(this).css("display", "block");
+						});
+					}
+				}
+	
+				var timer;
+				timer = setInterval(scroll, options.scrollTime);
+				_self.bind("mouseover", function() {
+					clearInterval(timer);
+				});
+				_self.bind("mouseout", function() {
+					timer = setInterval(scroll, options.scrollTime);
+				});
+	
+			});
+		};
+	})(jQuery);
+	
+	$(document).ready(function () {
+		$("#t_list").scrollQ();
+	});
+	
+
+    </script>
+
+</body>
+
+</html>
+
+​

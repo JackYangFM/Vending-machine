@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"><link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{margin:0;apdding:0;list-style:none;}
+.clear{clear:both;}
+body{background:url(images/backpic.png) no-repeat;background-size:cover;font-family:"Microsoft Yahei";color:#fff;}
+/*data_top*/
+.data_top{position:relative;}
+.data_top h1{text-align:center;font-size:0.75rem;font-weight:normal;line-height:1.5rem;}
+.data_top .d_timebox{position:absolute;top:0.6rem;left:1.2rem;}
+.data_top .d_timebox img{float:left;}
+.data_top .d_timebox #localtime{font-size:0.16rem;line-height:0.45rem;padding:0 0.1rem;}
+.data_top .d_sale{width:6.3rem;margin:0 auto 0.2rem;}
+.data_top .d_sale p{float:left;text-align:center;font-size:0.35rem;color:#f7ff56;padding:0.15rem 0 0 0;}
+.data_top .d_sale ul li{float:left;font-size:0.45rem;background:#00bfff;text-align:center;padding:0 0.03rem;margin:0 0.05rem;}
+
+/*data table*/
+.data_content .d_table{width:5.8rem;height:3.5rem;float:left;margin:0.2rem;background:rgba(18, 73, 125, 0.25);border-radius:0.03rem;}
+.data_content .list{overflow:hidden;}
+.data_content .list ul{padding:0 0 0 0.2rem;}
+.data_content .list p{color:#f7ff56;font-size:0.25rem;padding:0.1rem 0.1rem 0 0.2rem;}
+.data_content .list .l_title li a{font-size:0.18rem;color:#f7ff56;display:block;float:left;line-height:0.45rem;}
+.data_content .list .l_title li .t_name{width:3rem;}
+.data_content .list .l_title li .t_num{width:1.5rem;}
+.data_content .list .l_details{height:2.5rem;}
+.data_content .list .l_details li{padding:0.05rem 0;}
+.data_content .list .l_details li a{display:block;float:left;line-height:0.3rem;font-size:0.16rem;color:#70b3dd;}
+.data_content .list .l_details li .t_name{width:3rem;}
+.data_content .list .l_details li .t_num{width:1.5rem;}
+
+.data_content .member{width:6rem;overflow:hidden;} 
+.data_content .member .m_content{margin:0.4rem 0 0 0;}
+.data_content .member dl{width:3rem;font-size:0.24rem;color:#639cd3;padding:0.2rem 0;float:left;}
+.data_content .member dl .mdd{text-align:center;}
+.data_content .member dl .m_num{display:block;padding:0.15rem 0;text-align:center;font-size:0.36rem;}
+.data_content .member dl .m_namenum_z{color:#F96;}
+.data_content .member dl .m_namenum_h{color:#F30;}
+.data_content .member dl .m_namenum_x{color:#FC3;}
+.data_content .member dl .m_namenum_d{color:#F60;}
+.data_content .member{color:#db4242;text-align:center;font-size:0.19rem;}
+.data_content #container{width:6rem;}
+.data_content .d_chart{width:9.1rem;}
+
+.data_content .footer{font-size:0.14rem;color:#00bfff;margin:0.2rem 0 0 0.2rem;}
+
+</style>
+
+
+</head>
+
+<body>
+	<!--top-->
+	<div class="data_top">
+    	<h1>自动售货机数据平台</h1>
+        <div class="d_timebox">
+            <img src="images/clock.png" alt="time" width="45" height="45" />
+            <span id="localtime">2017-06-20 10:42:31</span>
+        </div>
+        <div class="d_sale">
+        	<p class="s_special">今日支付金额￥</p>
+            <ul>
+                <li>1</li>
+                <li>0</li>
+                <li>7</li>
+                <li>0</li>
+                <li id="Transaction5">3</li>
+                <li id="Transaction4">5</li>
+                <li id="Transaction3">7</li>
+                <li id="Transaction2">6</li>
+                <li id="Transaction1">6</li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+    
+    <!--data table-->
+    <div class="data_content">
+    	<!--d_table list start-->
+        <div class="d_table list">
+        	<p>热销商品排行</p>
+            <ul class="l_title">
+            	<li>
+                	<a class="t_name">商品名</a>
+                    <a class="t_num">销量</a>
+                    <a class="t_ranking">排名</a>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+            
+            <ul class="l_details" id="itemlist">
+            	<li>
+                	<a class="t_name">北冰洋汽水橙汁味</a>
+                    <a class="t_num">543</a>
+                    <a class="t_ranking">001</a>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                	<a class="t_name">百岁山 天然矿泉水 570ml</a>
+                    <a class="t_num">543</a>
+                    <a class="t_ranking">002</a>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                	<a class="t_name">康师傅 冰红茶550ml 茶饮料 饮品</a>
+                    <a class="t_num">543</a>
+                    <a class="t_ranking">003</a>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                	<a class="t_name">ALKAQUA 爱夸矿泉水</a>
+                    <a class="t_num">543</a>
+                    <a class="t_ranking">004</a>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                	<a class="t_name">家缘好吃点 锅巴 102克</a>
+                    <a class="t_num">543</a>
+                    <a class="t_ranking">005</a>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                	<a class="t_name">脉动 维生素饮料 600ml</a>
+                    <a class="t_num">543</a>
+                    <a class="t_ranking">006</a>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                	<a class="t_name">农夫山泉 饮用天然水550ml</a>
+                    <a class="t_num">543</a>
+                    <a class="t_ranking">007</a>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                	<a class="t_name">可口可乐600ml/瓶 碳酸饮料 瓶装</a>
+                    <a class="t_num">543</a>
+                    <a class="t_ranking">008</a>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </div>
+        <!--end d_table list-->
+        
+        <!--d_table member start-->
+        <div class="d_table member">
+        	<div class="m_content">
+                <dl>
+                    <dd class="mdd m_namez">全部会员总数量</dd>
+                    <dd class="m_num m_namenum_z">1003</dd>
+                </dl>
+                <dl>
+                    <dd class="mdd m_nameh">活跃会员数量</dd>
+                    <dd class="m_num m_namenum_h">263</dd>
+                </dl>
+                <dl>
+                    <dd class="mdd m_namex">新注册会员数量</dd>
+                    <dd class="m_num m_namenum_x" id="Transaction6">24</dd>
+                </dl>
+                <dl>
+                    <dd class="mdd m_namex">订单总数</dd>
+                    <dd class="m_num m_namenum_d">521</dd>
+                </dl>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--end d_table member-->
+        
+        <!--container start-->
+        <div class="d_table" id="container"></div>
+        <!--end container-->
+        
+        <!--d_table line_chart start-->
+        <div class="d_table d_chart line_chart" id="container1"></div>
+        <!--end d_table line_chart-->
+        
+        <!--d_table line_chart start-->
+        <div class="d_table d_chart bar_chart" id="container2"></div>
+        <!--end d_table line_chart-->
+        
+        <div class="clear"></div>
+        
+        <div class="footer">
+            <span>直播动态  DataView 提供运营动态直播、数据综合展示、设备监控预警等多种场景模板，稍加修改就能够直接服务于您的可视化需求。</span>
+        </div>
+    </div>
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/highcharts-3d.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/highcharts-zh_CN.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/adaptive-version2.js"></script>
+    <script src="js/main.js"></script>	
+
+</body>
+
+</html>
+
+​

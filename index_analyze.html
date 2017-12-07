@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"><link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{margin:0;apdding:0;list-style:none;}
+.clear{clear:both;}
+table{border-collapse:collapse;border-color:#85579e;}
+body{background-image:linear-gradient(#202426 10%,#9100DE 80%);font-family:"Microsoft Yahei";color:#fff;}
+/*data_top*/
+.data_top{position:relative;}
+.data_top h1{text-align:center;font-size:0.75rem;font-weight:normal;line-height:1.5rem;}
+.data_top .d_timebox{position:absolute;top:0.6rem;left:1.2rem;}
+.data_top .d_timebox img{float:left;}
+.data_top .d_timebox #localtime{font-size:0.16rem;line-height:0.45rem;padding:0 0.2rem;}
+
+/*analyze table*/
+.analyze_content .a_table{height:8.3rem;margin:0.3rem 0.78rem;overflow:hidden;}
+.analyze_content .a_table .l_title li a{font-size:0.18rem;display:block;float:left;line-height:0.8rem;width:2.8rem;border:0.01rem solid #85579e;text-align:center;font-weight:bold;background:rgba(46, 32, 61, 0.81);}
+.analyze_content .a_table .l_details{height:7.45rem;}
+.analyze_content .a_table .l_details .d_li1 a{background:rgba(0, 0, 0, 0.15);}
+.analyze_content .a_table .l_details .d_li2 a{background:rgba(0, 0, 0, 0.35);}
+.analyze_content .a_table .l_details li a{font-size:0.18rem;display:block;float:left;line-height:0.6rem;width:2.8rem;text-align:center;background:rgba(0, 0, 0, 0.25);border:0.01rem solid #85579e;}
+.analyze_content .a_table .l_details li .d_color1{color:#49d00c;font-weight:600;}
+.analyze_content .a_table .l_details li .d_color2{color:#ff9e03;font-weight:600;}
+.analyze_content .a_table .l_details li .d_color3{color:#ff2020;font-weight:600;}
+
+.analyze_content .footer{font-size:0.14rem;color:#00bfff;margin:0.2rem 0 0 1.2rem;}
+
+</style>
+
+
+</head>
+
+<body>
+	<!--top start-->
+	<div class="data_top">
+    	<h1>用户流失预警</h1>
+        <div class="d_timebox">
+            <img src="images/clock.png" alt="time" width="45" height="45" />
+            <span id="localtime">2017-06-20 10:42:31</span>
+        </div>
+    </div>
+    <!--end top-->
+    
+    <!--analyze_content-->
+    <div class="analyze_content">
+        <!--a_table start-->
+        <div class="a_table">
+        	<ul class="l_title">
+                <li>
+                    <a>用户名</a>
+                    <a>登录次数</a>
+                    <a>购买次数</a>
+                    <a>最后登录时间</a>
+                    <a>最后购买时间</a>
+                    <a>分析结果</a>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+            
+            <ul class="l_details" id="itemlist1">
+                <li class="d_li1">
+                    <a>Bob</a>
+                    <a>54</a>
+                    <a>56</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color3">风险系数：高</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li2">
+                    <a>崔云鹏</a>
+                    <a>53</a>
+                    <a>65</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color2">风险系数：中</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li1">
+                    <a>王苏然</a>
+                    <a>54</a>
+                    <a>56</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color1">风险系数：低</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li2">
+                    <a>任本旺</a>
+                    <a>53</a>
+                    <a>65</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color3">风险系数：高</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li1">
+                    <a>薄丽君</a>
+                    <a>54</a>
+                    <a>56</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color3">风险系数：高</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li2">
+                    <a>杨先森</a>
+                    <a>53</a>
+                    <a>65</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color2">风险系数：中</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li1">
+                    <a>王先森</a>
+                    <a>54</a>
+                    <a>56</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color1">风险系数：低</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li2">
+                    <a>李先森</a>
+                    <a>53</a>
+                    <a>65</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color3">风险系数：高</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li1">
+                    <a>Jack</a>
+                    <a>54</a>
+                    <a>56</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color3">风险系数：高</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li2">
+                    <a>张先生</a>
+                    <a>53</a>
+                    <a>65</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color2">风险系数：中</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li1">
+                    <a>李小姐</a>
+                    <a>54</a>
+                    <a>56</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color1">风险系数：低</a>
+                    <div class="clear"></div>
+                </li>
+                <li class="d_li2">
+                    <a>姚卫东</a>
+                    <a>53</a>
+                    <a>65</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a>2017.06.21-10:24:35</a>
+                    <a class="d_color3">风险系数：高</a>
+                    <div class="clear"></div>
+                </li>
+            </ul>    
+        </div>
+        <!--end a_table -->
+        
+        <div class="footer">
+            <span>直播动态  DataView 提供运营动态直播、数据综合展示、设备监控预警等多种场景模板，稍加修改就能够直接服务于您的可视化需求。</span>
+        </div>
+    </div>
+    <!--end analyze_content-->
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/highcharts-3d.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/highcharts-zh_CN.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/adaptive-version2.js"></script>
+    <script src="js/main.js"></script>	
+    
+    <script type="text/javascript">
+	(function ($) {
+	var status = false;
+	$.fn.scrollQ = function(options) {
+		var defaults = {
+			line:11,
+			scrollNum: 1,
+			scrollTime: 2000
+		};
+		var options = jQuery.extend(defaults, options);
+		var _self = this;
+		return this.each(function() {
+			$("li", this).each(function() {
+				$(this).css("display", "none");
+			});
+			$("li:lt(" + options.line + ")", this).each(function() {
+				$(this).css("display", "block");
+			});
+
+			function scroll() {
+				for (i = 0; i < options.scrollNum; i++) {
+					var start = $("li:first", _self);
+					start.fadeOut(100);
+					start.css("display", "none");
+					start.appendTo(_self);
+					$("li:eq(" + (options.line - 1) + ")", _self).each(function() {
+						$(this).fadeIn(500);
+						$(this).css("display", "block");
+					});
+				}
+			}
+
+			var timer;
+			timer = setInterval(scroll, options.scrollTime);
+			_self.bind("mouseover", function() {
+				clearInterval(timer);
+			});
+			_self.bind("mouseout", function() {
+				timer = setInterval(scroll, options.scrollTime);
+			});
+
+		});
+	};
+})(jQuery);
+    $(document).ready(function () {
+        $("#itemlist1").scrollQ();
+    });
+
+    </script>
+
+</body>
+
+</html>
+
+​
